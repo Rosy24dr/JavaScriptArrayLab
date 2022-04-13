@@ -134,7 +134,7 @@ function problemOne(){
         else{
             return false;
         }})
-    return results
+    return results;
 }
 
 let vegetarianFood = problemOne()
@@ -149,9 +149,9 @@ function problemTwo(){
             return true;
         }
         else{
-            return false
+            return false;
         }})
-    return results
+    return results;
 }
 
 let italianFoodServingMoreThanFive = problemTwo()
@@ -164,12 +164,12 @@ console.log('Italian food with serving size greater than 5:', italianFoodServing
 function problemThree(){
     let results = dishes.filter(function(el){
         if (el.id === el.servings){
-            return true
+            return true;
         }
         else{
-            return false
+            return false;
         }})
-    return results
+    return results;
 }
 
 let dishesWhereIdAndServingAreTheSame = problemThree()
@@ -181,12 +181,12 @@ console.log('Dishes that have the same id and serving count:', dishesWhereIdAndS
 function problemFour(){
     let results = dishes.filter(function(el){
         if (el.servings === 11){
-            return true
+            return true;
         }
         else{
-            return false
+            return false;
         }})
-    return results
+    return results;
 }
 
 let dishesServingCountEleven = problemFour()
@@ -195,6 +195,19 @@ console.log('Dishes with a serving count of 11:', dishesServingCountEleven)
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
 
+function problemFive(){
+    let results = dishes.filter(function(el){
+        if ((el.ingredients.includes('tomato')) && (el.ingredients.includes('cheese'))){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    return results;
+}
+
+let tomatoeAndCheeseIngredients = problemFive()
+console.log('Dishes that have both tomatoes & cheese as their ingredients:', tomatoeAndCheeseIngredients)
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
