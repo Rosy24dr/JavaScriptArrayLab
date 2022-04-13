@@ -240,8 +240,36 @@ function appendFuncion(){
 let dishNames = appendFuncion()
 console.log('These are the types of dishes we have:', dishNames)
 
-//8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
+//8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. 
+//So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+
+function cuisineTypeAndVeggieDishes(){
+    let resultOne = dishes.filter(function(el){
+        if(el.cuisine === "Vegetarian"){
+            return true;
+        }
+        else{
+            return false;
+        }})
+    let resultsTwo = resultOne.map(function(el){
+        return el.cuisine + " " + el.name;
+    }) 
+    return resultsTwo;
+}
+
+let typeOfVeggieDishes = cuisineTypeAndVeggieDishes();
+console.log('These are the Vegetarian dishes:', typeOfVeggieDishes);
+
+
+
+// let newArray = dishes.filter(dishes => dishes.cuisine.includes('Vegetarian')).map(({cuisine,name}) => ({cuisine,name}));
+// console.log(newArray);
+
+
+// let newArray = dishes.filter(dishes => dishes.cuisine.includes('Vegetarian')).map(function(el) {return el.dishes;}).join(dishes.cuisine) + (dishes.name); 
+// console.log(newArray);
+
 
 
 //BONUS
