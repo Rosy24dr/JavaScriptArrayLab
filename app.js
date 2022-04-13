@@ -178,8 +178,23 @@ console.log('Dishes that have the same id and serving count:', dishesWhereIdAndS
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
 
+function problemFour(){
+    let results = dishes.filter(function(el){
+        if (el.servings === 11){
+            return true
+        }
+        else{
+            return false
+        }})
+    return results
+}
+
+let dishesServingCountEleven = problemFour()
+console.log('Dishes with a serving count of 11:', dishesServingCountEleven)
+
 //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
 //Filter
+
 
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
